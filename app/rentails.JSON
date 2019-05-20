@@ -1,0 +1,76 @@
+{
+      "bikes": [
+      {
+        "id": 1,
+        "size": "medium",
+        "type": "mountain",
+        "frame": "carbon fiber",
+        "wheels": 27.5,
+        "suspension": "full",
+        "post": "dropper post",
+        "pedals": "clip",
+        "brand": "Yeti"
+      },
+      {
+        "id": 2,
+        "size": "large",
+        "type": "mountain",
+        "frame": "carbon fiber",
+        "wheels": 29,
+        "suspension": "full",
+        "post": "dropper post",
+        "pedals": "clip",
+        "brand": "Santa Cruz"
+      },
+      {
+        "id": 3,
+        "size": "small",
+        "type": "road",
+        "frame": "carbon fiber",
+        "wheels": 29,
+        "suspension": "hard tail",
+        "post": "standard",
+        "pedals": "clip",
+        "brand": "Moots"
+      }
+    ],
+    
+    "clothing": [
+      {
+        "id": 1,
+        "size": "small",
+        "type": "shammy",
+        "color": "black"
+      },
+      {
+        "id": 2,
+        "size": "medium",
+        "type": "shammy",
+        "color": "black"
+
+      },
+      { 
+        "id": 3,
+        "size": "large",
+        "type": "shammy",
+        "color": "Blue"
+
+      },
+      {
+        "id": 4,
+        "size": "small",
+        "type": "finger-less gloves",
+        "color": "black"
+      }
+    ],
+    
+    "helments": [
+      { 
+        "id": 1,
+        "size": "small",
+        "color": "black"
+      }
+    ]
+    
+    
+} 
