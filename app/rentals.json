@@ -1,68 +1,37 @@
-
-      [
-        {
-        "id": 1,
-        "size": "medium",
-        "type": "mountain",
-        "frame": "carbon fiber",
-        "wheels": 27.5,
-        "suspension": "full",
-        "post": "dropper post",
-        "pedals": "clip",
-        "brand": "Yeti"
-      },
-      {
-        "id": 2,
-        "size": "large",
-        "type": "mountain",
-        "frame": "carbon fiber",
-        "wheels": 29,
-        "suspension": "full",
-        "post": "dropper post",
-        "pedals": "clip",
-        "brand": "Santa Cruz"
-      },
-      {
-        "id": 3,
-        "size": "small",
-        "type": "road",
-        "frame": "carbon fiber",
-        "wheels": 29,
-        "suspension": "hard tail",
-        "post": "standard",
-        "pedals": "clip",
-        "brand": "Moots"
-      },
-    
-      {
-        "id": 132,
-        "size": "small",
-        "type": "shammy",
-        "color": "black"
-      },
-      {
-        "id": 221,
-        "size": "medium",
-        "type": "shammy",
-        "color": "black"
-
-      },
-      { 
-        "id": 329,
-        "size": "large",
-        "type": "shammy",
-        "color": "Blue"
-
-      },
-      {
-        "id": 430,
-        "size": "small",
-        "type": "finger-less gloves",
-        "color": "black"
-      },
-      { 
-        "id": 100,
-        "size": "small",
-        "color": "black"
-      }
-]
+[{
+    "id":100,
+    "title":"Yeti",
+    "desc":"Frame: Carbon Fiber, Suspension: Full, Tire Size: 29 x 2.5in",
+    "img":"https://content.competitivecyclist.com/images/items/900/YTI/YTI00DW/TU.jpg",
+    "price": 85.00 
+},{
+    "id":101,
+    "title":"Men's S-Works Epic",
+    "desc":"Frame: Carbon Fiber, Suspension: Full, Tire Size: 29 x 2.5in",
+    "img":"https://s7d5.scene7.com/is/image/Specialized/?layer=0&wid=1920&hei=640&fmt=jpg&src=is{Specialized/pdp-product-bg-light?wid=1920&hei=640}&layer=1&src=is{Specialized/90319-01_EPIC_SW-CARBON-SRAM-29_CARB-RKTRED_HERO?wid=920&hei=600&$hybris-pdp-hero$}",
+    "price":90.00
+},{
+    "id":102,
+    "title":"Moots Mountain Bike",
+    "desc":"Frame: Titanium, Suspension: Hard Tail, Tire Size: 26 x 2.3in",
+    "img":"http://www.dreambike.com/images/YBB11.jpg",
+    "price":60.00
+},{
+    "id":103,
+    "title":"S-Works Stumpjumper ST 29",
+    "desc":"Frame: Carbon Fiber, Suspension: Full, Tire Size: 29 x 2.5in",
+    "img":"https://s7d5.scene7.com/is/image/Specialized/?layer=0&wid=1920&hei=640&fmt=jpg&src=is{Specialized/pdp-product-bg-light?wid=1920&hei=640}&layer=1&src=is{Specialized/94718-06_SJ-FSR-ST-MEN-SW-CARBON-29-CKD-ACDKWI-BLK_HERO?wid=920&hei=600&$hybris-pdp-hero$}",
+    "price":85.00
+},{
+    "id":104,
+    "title":"Smith Venture MIPS Bike Helmet",
+    "desc":"Size: Medium, Color: Matte Black",
+    "img":"https://www.rei.com/media/4465d15d-27a5-4af1-8fa1-b7494bff4287?size=784x588",
+    "price":10.00
+},{
+    "id":105,
+    "title":"Fox Proframe Helmet",
+    "desc":"Size: Medium, Color: White/Black/Red, Style: Downhill",
+    "img":"https://cdn-us-ec.yottaa.net/53c6d66786305e30e100018d/acd43500c5780136ec32123dfe2baf36.yottaa.net/v~4b.2df/is/image/MoosejawMB/10424141x1043502_zm?$product700$&yocs=_&yoloc=us",
+    "price":15.00
+}]
