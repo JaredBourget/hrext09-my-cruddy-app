@@ -1,21 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HREXT09 R00lz!</title>
-  <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-          crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="app/app.js"></script>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+       
+        html {
+            box-sizing: border-box;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif; 
+            font-size: calc(1.5vh + 1vw + 1%); 
+            line-height: 1.5; 
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+       
+        body{ 
+            overflow: auto; 
+            min-height: 100vh; 
+            width: 100%; 
+        }
+        header{
+            padding: 1rem 2rem;
+            color: #ad5049;
+            text-shadow: 2px 2px 2px #333, 1px 1px 2px #ad5049;
+            background-image: url('https://www.guestguidepublications.com/wp-content/uploads/2016/01/dead-horse-point-moab.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    
+        main{
+            background-color: #ad50492f;
+            padding: 1rem 2rem;
+            border-top: 5px solid #ad5049;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            min-width: 600px;
+        }
+        footer{
+            display: flex;
+            justify-content: right;
+            margin: 2px;
+        }
+        #products{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+            
+            flex:1 1 auto;
+        }
+        #cart{
+            max-height: 100%;
+            flex: 1 1 20%;
+
+            
+        }
+        .card{
+            background-color: white;
+            display: grid;
+            align-content: space-between;
+            border: 4px solid #ad5049;
+            padding: 1rem;
+            max-width: 350px;
+            min-height: 300px;
+            box-sizing: content-box;
+            position: relative;
+        }
+        .card img{
+            width: 30vh;
+            height: 20vh;
+        }
+        .card .price{
+            display: flex;
+            align-self: flex-end;
+            top: 3rem;
+            left: 2rem;
+            text-shadow: 1px 1px 1px #333, 0.5px 0.5px 1px #eee;
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding: 0px;
+        }
+        .card h2{
+            font-size: 1.0rem;
+            display: block;
+            font-size: 1.0rem;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            
+        }
+        .card p{
+            font-size: 0.8rem;
+            padding: 0px;
+        }
+        .card .btn{
+            display: flex;
+            align-self: flex-end;
+            color: cornflowerblue;
+            cursor: pointer;
+        }
+        
+        .cart-item{
+            border-bottom: 1px solid#ad5049;
+            padding: 0.1rem;
+            width: 90%;
+            position: relative;
+        }
+        .cart-item .price{
+            top: 2rem;
+            bottom: 1rem;
+            right: 1rem;
+            width: 30%;
+            font-size: 0.8rem;
+            color: #ad5049;
+        }
+        .cart-item .title{
+            font-size: 0.8rem;
+            color: #999;
+            line-height: 0.8rem;
+            height: .1rem;
+            text-shadow: 1px 1px 1px #333, 0.5px 0.5px 1px #eee;
+            
+        }
+        .cart-item .controls{
+            cursor: pointer;
+            width: 15vh;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .cart-item span:nth-child(1),
+        .cart-item span:nth-child(3){
+            border: 1px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            background: #eee;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0 0.5rem;
+            display: block;
+            order: 1;
+        }
+        .emtpyCart .btn {
+            display: flex;
+            align-self: flex-end;
+            color: cornflowerblue;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-  <form>
-    <input id="keyInput" type="text" placeholder="key"></input>
-    <input id="valueInput" type="text" placeholder="value"></input>
-    <button id="createButton" type='submit'>Create</button>
-    <button id="updateButton" type='submit'>Update</button>
-  </form>
-  <script src='app/app.js'></script>
+    <header>
+        <h1>Cyclery Rentals</h1>
+    </header>
+    <main>
+        <section id="products"></section>
+        <section id="cart"></section>
+        <span><button class="emptyCart-btn" 
+            style="display: flex;
+            align-self: flex-end;
+            color: cornflowerblue;
+            cursor: pointer;
+            font-size: 40px;" 
+            type="button" onclick="localStorage.clear()">Empty Cart</button></span>
+    </main>    
 </body>
+<footer>
+        
+</footer>
 </html>
